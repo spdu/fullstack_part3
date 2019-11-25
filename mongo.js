@@ -30,17 +30,15 @@ const person = new Person({
   //number: parseInt(number), if numbers were pure numbers
 })
 if (process.argv.length<4) { //Just a query with the password
-Person.find({}).then(result => {
-    console.log("Phonebook:")
+  Person.find({}).then(result => {
+    console.log('Phonebook:')
     result.forEach(note => {
-      console.log(note.name + " " + note.number)
+      console.log(note.name + ' ' + note.number)
     })
     mongoose.connection.close()
   })
-  
+
 } else {
-person.save().then(response => {
-  console.log(`added ${name} number ${number} to phonebook`);
-  mongoose.connection.close();
-})
+  person.save().then(console.log(`added ${name} number ${number} to phonebook`))
+  mongoose.connection.close()
 }
