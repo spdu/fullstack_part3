@@ -17,7 +17,7 @@ let persons = [
     },
     {
       
-      content: "Ada Lovelace",
+      name: "Ada Lovelace",
       number: "39-44-5323523",
       id: 2
     },
